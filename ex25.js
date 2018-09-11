@@ -1,18 +1,22 @@
 var x = [];
 var i = 0;
-var veb = [];
 function adicionax(){
-    x.push(document.getElementById("x").value);
+    x.push(parseInt(document.getElementById("x").value));
     document.getElementById("adicionado").innerHTML = x[i] + ", adicionado com sucesso! " ; 
-    i++;   
+    i++;
 }
+var soma = 0;
+
 function calcula(){
-    var vm = x[0];
+    var m = x[0];
     for(i = 0;i<x.length;i++){ 
-        if(x[i] > vm) { 
-           vm = x[i];
+        if(x[i] > m){ 
+           m = x[i];
         }
+        soma = soma + x[i];
     }
-    document.getElementById("resultado").innerHTML = vm;
+
+    div = soma/m;
+    document.getElementById("resultado").innerHTML = "Elementos divididos pelo maior vetor = " + m + "<br/>" + " Resultado igual a: " + div;
 }
 

@@ -5,9 +5,8 @@ function adicionac(){
     
     c.push(parseInt(document.getElementById("c").value));
     document.getElementById("adicionado").innerHTML = c[i] + ", adicionado com sucesso! " ; 
-    veb.push(c[i]);
     i++;
-
+    veb.push((c[i]));
 }
 
 function calcula(){
@@ -15,7 +14,6 @@ function calcula(){
         
         if(veb[i] <= 0){ 
            veb.splice(i,1);
-           i--;
         }
     }
     document.getElementById("resultado").innerHTML = "Vetor A: " + c + "<br/>" + "Vetor compactado: " + veb;
