@@ -7,11 +7,12 @@ function adicionav(){
     i++;
     
 }
-i = 0;
+
 function calcula(){
-    for(i;i<v.length;i++){
+    for(i=0;i<v.length;i++){
         if (v[i] > 0){
             posi.push(parseInt(v[i]));
+        
         }
     }
     document.getElementById("resultado").innerHTML = posi;
